@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>工农宝</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.css" rel="stylesheet">
+
+  <!-- Bont Awesome-->
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- layout.css -->
+  <link href="css/main-layout.css" rel="stylesheet">
+
+  <!-- justified.css -->
+  <link href="css/justified.css" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".move">
+  <!-- nav -->
+  <nav class="nav-gnb-min visible-xs-block">
+    <a class="nav-a-gnb-min" id="dLabel" role="button" data-toggle="collapse" data-target="#logo-gnb" href="javascript:void(0)">农</a>
+    <ul id="logo-gnb" class="collapse dropdown-gnb" role="menu" aria-labelledby="dLabel">
+      <li><a href="index.html"><i class="icon-pushpin"></i>首页</a></li>
+      <li><a href="medical.html"><i class="icon-plus-sign-alt"></i>医疗</a></li>
+      <li><a href="house.html"><i class="icon-home"></i>租房</a></li>
+      <li><a href="heart.html"><i class="icon-heart"></i>爱心</a></li>
+      <li><a href="work.html"><i class="icon-wrench"></i>工作</a></li>
+      <li><a href="law.html"><i class="icon-legal"></i>法律</a></li>
+      <li><a href="life.html"><i class="icon-food"></i>生活</a></li>
+      <li><a data-toggle="modal" data-target="#Modal-gnb" href="#"><i class="icon-user"></i>登陆</a></li>
+    </ul>
+  </nav>
+  <nav class="navbar-gnb hidden-xs" role="navigation">
+    <div class="btn-gnb">
+      <ul class="nav-gnb" role="tablist">
+        <li class="active"><a href="index.html"><b>农</b></a></li>
+        <li data-toggle="tooltip" data-placement="right" title="医疗"><a href="medical.html"><i class="icon-plus-sign-alt"></i></a></li>
+        <li data-toggle="tooltip" data-placement="right" title="租房"><a href="house.html"><i class="icon-home"></i></a></li>
+        <li data-toggle="tooltip" data-placement="right" title="爱心"><a href="heart.html"><i class="icon-heart"></i></a></li>
+        <li data-toggle="tooltip" data-placement="right" title="工作"><a href="work.html"><i class="icon-wrench"></i></a></li>
+        <li data-toggle="tooltip" data-placement="right" title="法律"><a href="law.html"><i class="icon-legal"></i></a></li>
+        <li data-toggle="tooltip" data-placement="right" title="生活"><a href="life.html"><i class="icon-food"></i></a></li>
+      </ul>
+    </div>
+    <div class="user-gnb">
+      <ul class="nav-gnb" role="tablist">
+        <li data-placement="right" title="登陆" data-toggle="modal" data-target="#LoginModal"><a href="javascript:void(0)"><i  class="icon-user"></i></a></li>
+
+      </ul>
+    </div>
+  </nav><!-- nav -->
+
+  <!-- login -->
+  <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title text-center" id="LoginModal"><b>登陆</b></h4>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <form class="form-gnb" role="form">
+              <div class="form-group col-xs-8">
+                <div class="input-group">
+                  <div class="input-group-addon"><i class="icon-user"></i></div>
+                  <input type="email" class="form-control" id="InputEmail" placeholder="输入您的用户名">
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <span id="IDError">用户名不能为空!</span>
+              </div>
+              <div class="form-group col-xs-8 magin-top-10">
+                <!-- <label for="exampleInputPassword1">密　码：</label> -->
+                <div class="input-group">
+                  <div class="input-group-addon"><i class="icon-lock"></i></div>
+                  <input type="password" class="form-control" id="InputPassword" placeholder="请输入您的密码">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary col-sm-7">登陆</button>
+          <button type="button" class="btn btn-success col-sm-4" id="LoginButtom">注册</button>
+        </div>
+      </div>
+    </div>
+  </div> <!-- login -->
+
+  <!-- register -->
+  <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel-gnb" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title text-center" id="RegisterModal"><b>注册</b></h4>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <form class="form-gnb" role="form">
+              <div class="form-group col-xs-8">
+                <div class="input-group">
+                  <div class="input-group-addon"><i class="icon-user"></i></div>
+                  <input type="email" class="form-control" id="InputEmail" placeholder="输入您的用户名">
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <span id="IDError">用户名不能为空!</span>
+              </div>
+              <div class="form-group col-xs-8 magin-top-10">
+                <div class="input-group">
+                  <div class="input-group-addon"><i class="icon-lock"></i></div>
+                  <input type="password" class="form-control" id="InputPassword" placeholder="请输入您的密码">
+                </div>
+              </div>
+              <div class="form-group col-xs-8 magin-top-10">
+                <div class="input-group">
+                  <div class="input-group-addon"><i class="icon-lock"></i></div>
+                  <input type="password" class="form-control" id="InputPassword" placeholder="再次输入您的密码">
+                </div>
+              </div>
+              <div class="col-xs-4">
+                <span id="PwdError">两次输入的密码不一致！</span>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default col-sm-7" id="ReturnLogin">&lt;&lt;返回登陆</button>
+          <button type="button" class="btn btn-success col-sm-4">注册</button>
+        </div>
+      </div>
+    </div>
+  </div> <!-- register -->
+
+  <div class="main">
+
+    <!-- 页面主体 id对应导航条上的链接-->
+    <div class="container">
+
+      <footer>
+        <p>&copy; Company 2014</p>
+      </footer>
+    </div> <!-- /container -->
+  </div>
+
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/stickUp.js"></script>
+
+  <script type="text/javascript">
+    $("*").tooltip();
+    $("body").scrollspy({ target: '.move' })
+    jQuery(function($) {
+      $(document).ready( function() {
+                  //enabling stickUp on the '.navbar-wrapper' class
+                  $('.stick').stickUp();
+                });
+    });
+    $(document).ready(function(){
+      $("#LoginButtom").click(function(){
+        $("#LoginModal").modal('hide');
+        $("#RegisterModal").modal('show');
+      });
+      $("#ReturnLogin").click(function(){
+        $("#RegisterModal").modal('hide');
+        $("#LoginModal").modal('show');
+      });
+    });
+  </script>
+</body>
+</html>
